@@ -1,0 +1,150 @@
+/* COLORS */
+:root{
+     /* PRIMARY COLORS */
+--Moderateviolet: hsl(263, 55%, 52%);
+--Verydarkgrayishblue: hsl(217, 19%, 35%);
+--Verydarkblackishblue: hsl(219, 29%, 14%);
+--White: hsl(0, 0%, 100%);
+
+    /* NEUTRAL COLORS  */
+--Lightgray: hsl(0, 0%, 81%);
+--Lightgrayishblue: hsl(210, 46%, 95%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+    background-color: var(--Lightgray);
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto;
+    margin: 3rem 2rem;
+
+}
+
+.daniel-box{
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-color: var(--Moderateviolet);
+    border: 1px solid;
+    border-radius: 1rem;
+    
+}
+
+.jonathan-box, .jeanette-box, .patrick-box, .kira-box{
+    margin-top: 1.5rem;
+    border: 1px solid;
+    border-radius: 1rem;
+}
+
+.jonathan-box{
+    background-color: var(--Verydarkgrayishblue);
+}
+
+.jeanette-box , .kira-box{
+    background-color: grey;
+}
+
+.patrick-box{
+    background-color: var(--Verydarkblackishblue);
+}
+
+.photo{
+    height: 2rem;
+    border: 3px solid var(--Verydarkblackishblue);
+    border-radius: 1rem;
+}
+
+.profile{
+    display: flex;
+    margin: 1rem 2rem;
+}
+
+.profile h1, h2{
+    margin: auto 1rem;
+    color: white;
+    font-weight:lighter;
+}
+
+.profile h1{
+    font-size: 1rem;
+}
+
+
+.profile h2, .paragraph{
+    opacity: 50%; 
+    font-size: 0.8rem;
+}
+
+.highlight-paragraph{
+    margin-left: 2rem;
+    margin-right: 3.5rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.paragraph{
+    color: white;
+    margin: 1rem 4.5rem 2rem 2rem ;    
+}
+
+.attribution{
+    text-align: center;
+    font-size: 1rem;
+}
+
+.attribution a{
+    text-decoration: none;
+    transition: .5s;
+}
+
+a:hover{
+    color: var(--Moderateviolet);
+}
+
+/* DESKTOP DESIGN */
+@media screen and (min-width:1110px) {
+    .grid-container{
+        grid-template-areas: 
+            'daniel daniel jonathan kira'
+            'jeanette patrick patrick kira';
+        margin: 3rem 5rem;
+            }
+
+    .daniel-box{
+        grid-area: daniel;
+        margin-top: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    .jonathan-box{
+        grid-area: jonathan;
+        margin-right: 1.5rem;
+    }
+
+    .jeanette-box{
+        grid-area: jeanette;
+        margin-right: 1.5rem;
+    }
+
+    .kira-box{
+        grid-area: kira;
+        width: 70%;
+    }
+    
+    .patrick-box{
+        grid-area: patrick;
+        margin-right: 1.5rem;
+    }
+}
+
+
